@@ -46,16 +46,15 @@ for number in range(2, maximum+1):
 print("The sum of even numbers from 1 to {0} = {1}".format(number, total))
 # Compute the sum of the first 50 odd numbers
 
-n = int(input("number : \n"))
-i = 0
-current = 1
-sum = 0
+maximum = int(input(" Please Enter the Maximum Value : "))
+Oddtotal = 0
 
-while i < n:
-    sum += 2
-    i += 1
+for number in range(1, maximum+1):
+    if(number % 2 != 0):
+        print("{0}".format(number))
+        Oddtotal = Oddtotal + number
 
-print(sum)
+print("The Sum of Odd Numbers from 1 to {0} = {1}".format(number, Oddtotal))
 
 # Compute the average if the first 100 odd numbers
 # Write a function that returns the average of the first N numbers, where
