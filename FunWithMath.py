@@ -57,12 +57,79 @@ for number in range(1, maximum+1):
 print("The Sum of Odd Numbers from 1 to {0} = {1}".format(number, Oddtotal))
 
 # Compute the average if the first 100 odd numbers
+total = 0
+length = 0
+for i in range(1, 200, 2):
+    total += i
+    length += 1
+
+print(total / length)
 # Write a function that returns the average of the first N numbers, where
 #   N is a parameter
+print ("calculate an average of first n natural numbers")
+n = input("Enter Number ")
+n = int (n)
+average = 0
+sum = 0
+
+for num in range(0,n+1,1):
+    sum = sum+num;
+average = sum / n
+print("Average of first ", n, "number is: ", average)
 # Write a function called factorial that computes the product of the first N
 #   numbers, where N is a parameter
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n-1)
+n=int(input("Input a number to compute the factiorial : "))
+print(factorial(n))
 # Each number in the Fibonacci sequence is the sum of the previous two numbers.
 #   The first two numbers in the sequence are 1 and 1. Compute the 10th
-#   Fibonacci number.
+# #   Fibonacci number.
+FibArray = [0,1]
+def fibonacci(n):
+    if n < 0:
+        print("Incorrect input")
+    elif n <= len(FibArray):
+        return FibArray[n - 1]
+    else:
+        temp_fib = fibonacci(n - 1) + fibonacci(n - 2)
+        FibArray.append(temp_fib)
+        return temp_fib
+
+
+print(fibonacci(10))
 # Write a function to compute the Nth Fibonacci number, where N is a parameter.
-#   You may assime that N will be greater than or equal to 3.
+#   You may assume that N will be greater than or equal to 3.
+FibArray = [0,1]
+def fibonacci(n):
+    if n < 0:
+        print("Incorrect input")
+    elif n <= len(FibArray):
+        return FibArray[n - 1]
+    else:
+        temp_fib = fibonacci(n - 1) + fibonacci(n - 2)
+        FibArray.append(temp_fib)
+        return temp_fib
+
+
+print(fibonacci(n))
+
+# A Monte Carlo Simulation
+
+import random
+
+print(random.random())
+
+# Boolean expressions
+# > greater than
+# >= greater than ir equal to
+# < less than
+# <= less than or equal to
+# == the same as [ equal to ]
+# != NOT equal to
+
+dogWeight = 25
+print(dogWeight >= 25)
