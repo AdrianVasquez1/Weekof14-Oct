@@ -132,4 +132,32 @@ print(random.random())
 # != NOT equal to
 
 dogWeight = 25
-print(dogWeight >= 25)
+print(dogWeight != 25)
+catWeight = 15
+
+# compound Boolean operators
+# and
+# or
+# not
+
+print(dogWeight > 30 and catWeight > 20)
+print(not catWeight < 20)
+
+# Decision Making -- Selection Statements
+
+a = 5
+b = 10
+c = 75
+
+if a > b :
+    c = 45
+    if b > c:
+        a = 25
+    else:
+        a = -25
+else:
+    c = 1050
+    if b == a:
+        c = 25
+
+print(c)
