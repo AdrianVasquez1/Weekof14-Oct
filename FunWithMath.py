@@ -117,4 +117,19 @@ def fibonacci(n):
 
 print(fibonacci(n))
 
+# A Monte Carlo Simulation
 
+import random
+
+print(random.random())
+
+# Boolean expressions
+# > greater than
+# >= greater than ir equal to
+# < less than
+# <= less than or equal to
+# == the same as [ equal to ]
+# != NOT equal to
+
+dogWeight = 25
+print(dogWeight >= 25)
