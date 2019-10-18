@@ -160,4 +160,17 @@ else:
     if b == a:
         c = 25
 
-print(c)
+print(a, b, c)
+
+d = 55
+e = 72
+f =44
+ans = 0
+if d > e:
+    ans = 12
+else:
+    if d == e:
+        ans = 50
+    else:
+        if f < d * e:
+            ans =100
