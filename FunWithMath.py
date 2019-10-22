@@ -43,7 +43,6 @@ for number in range(2, maximum+1):
         print("{0}".format(number))
         total = total + number
 
-print("The sum of even numbers from 1 to {0} = {1}".format(number, total))
 # Compute the sum of the first 50 odd numbers
 
 maximum = int(input(" Please Enter the Maximum Value : "))
@@ -180,7 +179,43 @@ else:
 print(ans)
 
 def montePi(numDarts):
+
     inCircle = 0
+
+    for i in range(numDarts):
+        x = random.random()
+        y = random.random()
+
+        distance = math.sqrt(x**2 + y**2)
+
+        if distance <= 1:
+            inCircle = inCircle + 1
+
+    pi = inCircle / numDarts * 4
+    return pi
+
+print(montePi(10000))
+
+import turtle
+
+def showMontePi(numDarts):
+    scn = turtle.Screen()
+    t = turtle.Turtle()
+
+    scn.setworldcoordinates(-2,-2, 2, 2)
+
+    t.penup()
+    t.goto(-1, 0)
+    t.pendown()
+    t.goto(0, 1)
+
+    t.penup()
+    t.goto(0, 1)
+    t.pendown()
+    t.goto(0, -1)
+
+    inCircle = 0
+    t.penup()
 
     for i in range(numDarts):
         x = random.random()
@@ -198,32 +233,12 @@ def montePi(numDarts):
 
         t.dot()
 
-        pi = inCircle / numDarts * 4
-        scn.exitonClick()
-        return pi
+    pi = inCircle / numDarts * 4
+    scn.exitonclick()
+    return pi
 
+showMontePi(1000)
 
-print(montePi(10000))
-
-import turtle
-
-def showMontePi(numDarts):
-    scn = turtle.Screen()
-    t = turtle.Turtle()
-
-    scn = setworldcoordinates(-2,-2, 2, 2)
-
-    t.penup()
-    t.goto(-1, 0)
-    t.pendown()
-    t.goto(0, 1)
-
-    t.penup()
-    t.goto(0, 1)
-    t.pendown()
-    t.goto(0, -1)
-
-    inCircle = 0
-    t.penup()
-
-print(showMontePi)
+# Your Task:
+# Modify the simulations to plot points in the entire circle. You will have to
+# adjust the calculated value of pi accordingly.
